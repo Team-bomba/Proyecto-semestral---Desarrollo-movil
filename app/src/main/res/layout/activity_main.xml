@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#062F41"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/card"
+            android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Anime XD"
+            android:textAlignment="center"
+            android:textColor="#003252"
+            android:layout_marginBottom="20dp"
+            android:textSize="32dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="Nombre de usuario"
+            android:layout_marginLeft="50dp"
+            android:textColor="#003252"
+            />
+
+        <EditText
+            android:id="@+id/Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/rounded"
+            android:paddingLeft="20dp"
+            android:textColor="#330000"
+            android:hint="e.g Luis Tourres"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="Password"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="#003252"
+            />
+
+        <EditText
+            android:id="@+id/Contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded"
+            android:paddingLeft="20dp"
+            android:layout_marginHorizontal="40dp"
+            android:textColor="#330000"
+            android:hint="e.g 25601440"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/Boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttons"
+            android:textColor="#ffffff"
+            android:text="Login"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="25dp"
+            android:text="Hecho por:"
+            android:textColor="#003252"
+            android:layout_marginTop="25dp"
+            android:textSize="12dp"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
