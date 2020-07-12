@@ -9,16 +9,16 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:background="#FC9"
+        android:background="#484848"
         android:gravity="center" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Fixed Header"
+            android:text="Header"
             android:textColor="#000"
             android:textSize="20sp" />
     </RelativeLayout>
@@ -28,16 +28,16 @@
     <RelativeLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
-        android:background="#FC0"
+        android:background="#484848"
         android:gravity="center" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Fixed Footer"
+            android:text="Footer"
             android:textColor="#000"
             android:textSize="20sp" />
     </RelativeLayout>
@@ -50,13 +50,14 @@
         android:layout_height="fill_parent"
         android:layout_above="@id/footer"
         android:layout_below="@id/header"
+        android:background="#282828"
         android:gravity="center" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Content"
-            android:textColor="#33E"
+            android:text="Contenido"
+            android:textColor="#0F73FF"
             android:textSize="20sp" />
     </RelativeLayout>
 

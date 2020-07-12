@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#002C56"
+        android:background="#282828"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:text="Anime XD"
             android:textAlignment="center"
-            android:textColor="#003252"
+            android:textColor="#0F73FF"
             android:layout_marginBottom="20dp"
             android:textSize="32dp"
             />
@@ -42,7 +42,7 @@
             android:layout_height="25dp"
             android:text="Nombre de usuario"
             android:layout_marginLeft="50dp"
-            android:textColor="#003252"
+            android:textColor="#F5F5F5"
             />
 
         <EditText
@@ -64,7 +64,7 @@
             android:text="Password"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="50dp"
-            android:textColor="#003252"
+            android:textColor="#F5F5F5"
             />
 
         <EditText
@@ -87,7 +87,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@drawable/buttons"
-            android:textColor="#ffffff"
+            android:textColor="#F5F5F5"
             android:text="Login"/>
 
         <TextView
@@ -96,7 +96,7 @@
             android:gravity="center"
             android:layout_height="25dp"
             android:text="Hecho por:"
-            android:textColor="#003252"
+            android:textColor="#F5F5F5"
             android:layout_marginTop="25dp"
             android:textSize="12dp"
             />
