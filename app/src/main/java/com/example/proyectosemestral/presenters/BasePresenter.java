@@ -1,10 +1,13 @@
-package com.example.proyectosemestral;
+package com.example.proyectosemestral.presenters;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.proyectosemestral.R;
+
+
+public abstract class BasePresenter extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
