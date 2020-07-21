@@ -12,39 +12,27 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="-2dp"
         android:background="#484848"
         android:gravity="center">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Anime XD"
-        android:textColor="#0F73FF"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Tendencias"
+                android:textColor="#0F73FF"
+                android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/SearchInput"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="10dp"
-        android:background="@drawable/rounded"
-        android:paddingLeft="20dp"
-        android:textColor="#330000"
-        android:hint="Buscar..."
-        android:layout_gravity="center"
-        />
-</LinearLayout>
+        </LinearLayout>
 
 
     </RelativeLayout>
@@ -59,23 +47,23 @@
         android:gravity="center" >
         <LinearLayout
             android:layout_width="100dp"
-    android:orientation="vertical"
+            android:orientation="vertical"
             android:gravity="center"
-    android:layout_height="wrap_content">
-    <ImageButton
-        android:id="@+id/btnHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#484848"
-        android:src="@mipmap/active_home" />
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#484848"
+                android:src="@mipmap/inactive_home" />
             <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
                 android:gravity="center"
-            android:textColor="#0F73FF"
-            android:textSize="40px" />
+                android:textColor="#F5F5F5"
+                android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="100dp"
@@ -108,13 +96,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_tendencies" />
+                android:src="@mipmap/active_tendencies" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tendencias"
                 android:gravity="center"
-                android:textColor="#F5F5F5"
+                android:textColor="#0F73FF"
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -150,54 +138,32 @@
         android:background="#282828"
         android:gravity="center" >
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <com.denzcoskun.imageslider.ImageSlider
-            android:layout_width="match_parent"
-            android:layout_marginBottom="15dp"
-            android:layout_height="200dp"
-            app:delay="0"
-            app:period="1000"
-            android:background="#000000"
-            app:auto_cycle="true"></com.denzcoskun.imageslider.ImageSlider>
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@drawable/card"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:id="@+id/destacados"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:text="Destacados"
-                android:textColor="#0F73FF"
-                android:textSize="20sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@drawable/card"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:id="@+id/Estrenos"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:text="Estrenos"
-                android:textColor="#0F73FF"
-                android:textSize="20sp" />
-        </LinearLayout>
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Busqueda"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
-
 </RelativeLayout>
