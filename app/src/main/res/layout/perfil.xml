@@ -26,9 +26,9 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Tendencias"
+                android:gravity="center"
+                android:text="Perfil"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
 
@@ -96,13 +96,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/active_tendencies" />
+                android:src="@mipmap/inactive_tendencies" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tendencias"
                 android:gravity="center"
-                android:textColor="#0F73FF"
+                android:textColor="#F5F5F5"
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -116,13 +116,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_community" />
+                android:src="@mipmap/active_community" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comunidad"
                 android:gravity="center"
-                android:textColor="#F5F5F5"
+                android:textColor="#0F73FF"
                 android:textSize="40px" />
         </LinearLayout>
     </LinearLayout>
