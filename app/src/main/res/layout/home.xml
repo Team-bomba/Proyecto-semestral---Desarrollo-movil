@@ -21,15 +21,17 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
+
     <TextView
-        android:layout_width="wrap_content"
         android:id="@+id/name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:text="no c bro xd"
+        android:layout_marginTop="10dp"
+        android:text="Anime XD"
         android:textColor="#0F73FF"
         android:textSize="20sp" />
+
     <EditText
         android:id="@+id/SearchInput"
         android:layout_width="match_parent"
@@ -56,7 +58,7 @@
         android:background="#484848"
         android:gravity="center" >
         <LinearLayout
-    android:layout_width="100dp"
+            android:layout_width="100dp"
     android:orientation="vertical"
             android:gravity="center"
     android:layout_height="wrap_content">
@@ -68,12 +70,11 @@
         android:background="#484848"
         android:src="@mipmap/active_home" />
             <TextView
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inicio"
                 android:gravity="center"
             android:textColor="#0F73FF"
-            android:layout_paddingBottom="5dp"
             android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -89,12 +90,11 @@
                 android:background="#484848"
                 android:src="@mipmap/inactive_search" />
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Buscar"
                 android:gravity="center"
                 android:textColor="#F5F5F5"
-                android:layout_paddingBottom="5dp"
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -110,12 +110,11 @@
                 android:background="#484848"
                 android:src="@mipmap/inactive_tendencies" />
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tendencias"
                 android:gravity="center"
                 android:textColor="#F5F5F5"
-                android:layout_paddingBottom="5dp"
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -131,12 +130,11 @@
                 android:background="#484848"
                 android:src="@mipmap/inactive_community" />
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comunidad"
                 android:gravity="center"
                 android:textColor="#F5F5F5"
-                android:layout_paddingBottom="5dp"
                 android:textSize="40px" />
         </LinearLayout>
     </LinearLayout>
@@ -177,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="no c bro xd"
+                android:text="Destacados"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
         </LinearLayout>
