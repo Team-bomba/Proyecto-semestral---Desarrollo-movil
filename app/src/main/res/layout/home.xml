@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Header aligned to top -->
 
@@ -140,7 +141,20 @@
         android:background="#282828"
         android:gravity="center" >
 
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.denzcoskun.imageslider.ImageSlider
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:delay="0"
+            app:period="1000"
+            android:background="#000000"
+            app:auto_cycle="true"></com.denzcoskun.imageslider.ImageSlider>
         
+    </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>
