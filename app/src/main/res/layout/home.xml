@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:text="Header"
-        android:textColor="#000"
+        android:text="no c bro xd"
+        android:textColor="#0F73FF"
         android:textSize="20sp" />
     <EditText
         android:id="@+id/SearchInput"
@@ -98,7 +98,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Inicio"
-                android:paddingLeft="30dp"
+                android:paddingLeft="27dp"
                 android:textColor="#0F73FF"
                 android:layout_paddingBottom="5dp"
                 android:textSize="40px" />
@@ -153,7 +153,7 @@
             app:period="1000"
             android:background="#000000"
             app:auto_cycle="true"></com.denzcoskun.imageslider.ImageSlider>
-        
+
     </LinearLayout>
     </RelativeLayout>
 
