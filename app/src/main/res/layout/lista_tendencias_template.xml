@@ -34,17 +34,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25px"
                     android:hint="Kimetsu no Yaiba"
                     android:textColor="#000000"
-                    android:textColorHint="black"
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="200px"
                     android:layout_marginLeft="25px"
