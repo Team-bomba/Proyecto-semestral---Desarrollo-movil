@@ -11,6 +11,7 @@ import com.example.proyectosemestral.adapters.AnimeListAdapter;
 import com.example.proyectosemestral.adapters.PostListAdapter;
 import com.example.proyectosemestral.interfaces.TeamBombaApi;
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.models.Comment;
 import com.example.proyectosemestral.models.Post;
 
 import java.io.IOException;
@@ -94,4 +95,5 @@ public abstract class BasePresenter extends AppCompatActivity  {
             }
         });
     }
+
 }

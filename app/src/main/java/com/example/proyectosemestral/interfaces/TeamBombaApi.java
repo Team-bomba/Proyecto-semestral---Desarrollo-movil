@@ -1,7 +1,9 @@
 package com.example.proyectosemestral.interfaces;
 
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.models.Comment;
 import com.example.proyectosemestral.models.Post;
+import com.example.proyectosemestral.models.User;
 
 import java.util.List;
 
@@ -22,4 +24,13 @@ public interface TeamBombaApi {
 
     @GET("posts")
     Call<List<Post>> getPosts();
+
+    @GET("posts/{id}")
+    Call<Post> getPost(@Path("id") int query);
+
+    @GET("posts/{id}/comments")
+    Call<List<Comment>> getPostComments(@Path("id") int query);
+
+    @GET("users/{id}")
+    Call<User> getUser(@Path("id") int query);
 }
