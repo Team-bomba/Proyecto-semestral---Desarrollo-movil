@@ -6,7 +6,7 @@ public class Comment {
     private int id;
     private String body;
     private int user_id;
-    private String username;
+    private String user_name;
     private String commentable_type;
     private int commentable_id;
     private Date created_at;
@@ -41,6 +41,6 @@ public class Comment {
     }
 
     public String getUsername() {
-        return username;
+        return user_name;
     }
 }

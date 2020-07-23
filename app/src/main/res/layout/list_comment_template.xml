@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25px"
-                    android:hint="Kimetsu no Yaiba"
+                    android:hint=""
                     android:textColor="#000000"
                     android:textSize="15dp" />
 

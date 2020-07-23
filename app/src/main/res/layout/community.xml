@@ -203,7 +203,7 @@
                         android:id="@+id/PostBody"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="El anime Kimetsu no Yaiba fue lo mejor que e visto en la historia, lo recomiendo100%"
+                        android:hint=". . ."
                         android:textColor="#000000"
                         android:textSize="15dp" />
                     <!-- android:textColorHint="black" -->

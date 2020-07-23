@@ -26,6 +26,7 @@ public class PostViewActivity extends BasePresenter {
     protected Post post;
     protected User autor;
 
+    protected TextView postBody;
     protected ListView lvcomments;
     protected TextView UserName;
 
@@ -35,9 +36,11 @@ public class PostViewActivity extends BasePresenter {
         setContentView(R.layout.community);
 
         lvcomments= findViewById(R.id.lvComments);
-        getPost(1);
-        getAutor(post.getUser_id());
-        getPostComment();
+        getPost(set_post());
+    }
+
+    private int set_post(){
+        return Integer.parseInt(getIntent().getStringExtra("post_id"));
     }
 
     protected void getAutor(int user_id){
@@ -86,9 +89,10 @@ public class PostViewActivity extends BasePresenter {
                     return;
                 }
                 post = response.body();
-
-
-                lvItems.setAdapter(PostAdapter);
+                postBody = findViewById(R.id.PostBody);
+                postBody.setText(post.getBody());
+                getAutor(post.getUser_id());
+                getPostComment(post.getId());
             }
 
             @Override
@@ -98,7 +102,7 @@ public class PostViewActivity extends BasePresenter {
         });
     }
 
-    protected void getPostComment(){
+    protected void getPostComment(int post_id){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Base_url)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -106,7 +110,7 @@ public class PostViewActivity extends BasePresenter {
 
         TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
 
-        Call<List<Comment>> call = teamBombaApi.getPostComments(post.getId());
+        Call<List<Comment>> call = teamBombaApi.getPostComments(post_id);
 
         call.enqueue(new Callback<List<Comment>>() {
             @Override
