@@ -8,8 +8,10 @@ import android.widget.ListView;
 
 import com.example.proyectosemestral.R;
 import com.example.proyectosemestral.adapters.AnimeListAdapter;
+import com.example.proyectosemestral.adapters.PostListAdapter;
 import com.example.proyectosemestral.interfaces.TeamBombaApi;
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.models.Post;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,6 +26,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class BasePresenter extends AppCompatActivity  {
     protected String Base_url = "https://team-bomba-api.herokuapp.com/api/v1/";
     protected List<Anime> animeLists;
+    protected List<Post> postLists;
+    public PostListAdapter PostAdapter;
     public AnimeListAdapter AnimeAdapter;
     public Context context = this;
 
@@ -58,6 +62,34 @@ public abstract class BasePresenter extends AppCompatActivity  {
 
             @Override
             public void onFailure(Call<List<Anime>> call, Throwable t) {
+
+            }
+        });
+    }
+
+    protected void getPosts(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Base_url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
+
+        Call<List<Post>> call = teamBombaApi.getPosts();
+
+        call.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                if(!response.isSuccessful()){
+
+                }
+                postLists = response.body();
+                PostAdapter = new PostListAdapter(context, postLists);
+                lvItems.setAdapter(PostAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
 
             }
         });

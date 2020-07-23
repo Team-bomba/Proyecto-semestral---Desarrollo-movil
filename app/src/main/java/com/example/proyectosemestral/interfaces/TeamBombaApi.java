@@ -1,6 +1,7 @@
 package com.example.proyectosemestral.interfaces;
 
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.models.Post;
 
 import java.util.List;
 
@@ -18,4 +19,7 @@ public interface TeamBombaApi {
 
     @GET("animes")
     Call<List<Anime>> getAnimes();
+
+    @GET("posts")
+    Call<List<Post>> getPosts();
 }
