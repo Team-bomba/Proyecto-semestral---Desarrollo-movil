@@ -23,6 +23,9 @@ public interface TeamBombaApi {
     @GET("animes")
     Call<List<Anime>> getAnimes();
 
+    @GET("animes/{id}")
+    Call<Anime> getAnime(@Path("id") int query);
+
     @GET("posts")
     Call<List<Post>> getPosts();
 
