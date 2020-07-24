@@ -34,7 +34,7 @@ public class User {
 
         DBSQLiteHelper dbsqlite = new DBSQLiteHelper(contexto,"SessionsDB",null, 1);
         SQLiteDatabase db = dbsqlite.getWritableDatabase(); //get the database that was created in this instance
-        Cursor c = db.rawQuery("select * from sessions where id >?", new String[]{"0"});
+        Cursor c = db.rawQuery("select * from sessions where user_id > ? ;", new String[]{"0"});
         if (c.moveToLast()) {
             user_id = c.getInt(0);
             return user_id;
