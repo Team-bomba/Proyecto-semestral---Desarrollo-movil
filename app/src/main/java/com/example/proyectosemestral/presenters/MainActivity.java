@@ -73,7 +73,7 @@ public class MainActivity extends BasePresenter {
                     Log.e("ERROR", response.message());
                     return;
                 }
-                Toast.makeText(context,"Bienvenido",
+                Toast.makeText(context,"Bienvenido :D",
                         Toast.LENGTH_SHORT).show();
                 current_user = response.body();
                 current_user.save_current_user(context);

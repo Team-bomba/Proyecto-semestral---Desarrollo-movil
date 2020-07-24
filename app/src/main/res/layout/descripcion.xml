@@ -77,13 +77,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_search" />
+                android:src="@mipmap/active_search" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recomendados"
                 android:gravity="center"
-                android:textColor="#F5F5F5"
+                android:textColor="#0F73FF"
                 android:textSize="30px" />
         </LinearLayout>
         <LinearLayout
@@ -117,14 +117,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/active_community" />
+                android:src="@mipmap/inactive_community" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comunidad"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:textColor="#0F73FF"
+                android:textColor="#F5F5F5"
                 android:textSize="40px" />
         </LinearLayout>
     </LinearLayout>

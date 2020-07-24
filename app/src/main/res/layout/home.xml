@@ -183,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Destacado"
+                android:text="Destacado semanal"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
             <ImageView
