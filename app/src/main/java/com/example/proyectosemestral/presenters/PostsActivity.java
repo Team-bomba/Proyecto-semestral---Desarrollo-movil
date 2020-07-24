@@ -13,5 +13,6 @@ public class PostsActivity extends BasePresenter {
 
         lvItems= findViewById(R.id.lvItems);
         getPosts();
+        SetCurrentUserIfexist();
     }
 }

@@ -15,5 +15,6 @@ public class tendenciasActivity extends BasePresenter {
 
         lvItems= findViewById(R.id.lvItems);
         getAnimeTendencias();
+        SetCurrentUserIfexist();
     }
 }

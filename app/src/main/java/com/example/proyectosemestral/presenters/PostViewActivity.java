@@ -37,6 +37,7 @@ public class PostViewActivity extends BasePresenter {
 
         lvcomments= findViewById(R.id.lvComments);
         getPost(set_post());
+        SetCurrentUserIfexist();
     }
 
     private int set_post(){

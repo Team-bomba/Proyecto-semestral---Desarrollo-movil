@@ -1,21 +1,20 @@
 package com.example.proyectosemestral.presenters;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.proyectosemestral.R;
-import com.example.proyectosemestral.adapters.AnimeListAdapter;
+import com.example.proyectosemestral.adapters.CommentListAdapter;
 import com.example.proyectosemestral.interfaces.TeamBombaApi;
-import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.models.Comment;
+import com.example.proyectosemestral.models.Post;
 import com.example.proyectosemestral.models.User;
 
-import java.io.IOException;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,33 +22,32 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends BasePresenter {
-    EditText Form_user;
-    EditText Form_pass;
-    Button Form_submit;
+public class PerfilViewActivity extends BasePresenter {
+
+    protected TextView userName;
+    protected TextView email;
+    protected Button log_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        User.destroy_current_user(context);
+        setContentView(R.layout.perfil);
+        current_user_set();
 
-        inicializar_controles();
+        log_out = findViewById(R.id.CerrarSesion);
 
-        Form_submit.setOnClickListener(new View.OnClickListener() {
+        log_out.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                String USR = Form_user.getText().toString();
-                String PASS = Form_pass.getText().toString();
-
-                verifyUser(USR,PASS);
-
+            public void onClick(View view) {
+                Intent i=new Intent(context, MainActivity.class);
+                startActivity(i);
             }
         });
+
     }
 
-    protected void verifyUser(String email, String password){
+
+    protected void getUser(int user_id){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Base_url)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -57,7 +55,7 @@ public class MainActivity extends BasePresenter {
 
         TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
 
-        Call<User> call = teamBombaApi.verifyUser(email, password);
+        Call<User> call = teamBombaApi.getUser(user_id);
 
         call.enqueue(new Callback<User>() {
             @Override
@@ -66,9 +64,7 @@ public class MainActivity extends BasePresenter {
                     return;
                 }
                 current_user = response.body();
-                current_user.save_current_user(context);
-                Intent i = new Intent(context, PostsActivity.class);
-                startActivity(i);
+                showCurrentUser();
             }
 
             @Override
@@ -78,9 +74,18 @@ public class MainActivity extends BasePresenter {
         });
     }
 
-    public void inicializar_controles(){
-        Form_user = (EditText) findViewById(R.id.Usuario);
-        Form_pass = (EditText) findViewById(R.id.Contraseña);
-        Form_submit = (Button) findViewById(R.id.FormLogin);
+    protected void current_user_set(){
+        if(user_signed_in() > 0){
+            getUser(user_signed_in());
+        }
     }
+
+
+    protected void showCurrentUser(){
+        userName = findViewById(R.id.UserName);
+        email = findViewById(R.id.Email);
+        email.setText(current_user.getEmail());
+        userName.setText(current_user.getName());
+    }
+
 }

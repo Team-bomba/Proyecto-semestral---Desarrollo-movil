@@ -10,6 +10,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface TeamBombaApi {
 
@@ -33,4 +34,8 @@ public interface TeamBombaApi {
 
     @GET("users/{id}")
     Call<User> getUser(@Path("id") int query);
+
+    @GET("/users/verify?")
+    Call<User> verifyUser(@Query("user[name]") String name,
+                                     @Query("user[password]") String password);
 }

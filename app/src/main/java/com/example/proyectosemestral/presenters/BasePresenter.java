@@ -13,6 +13,7 @@ import com.example.proyectosemestral.interfaces.TeamBombaApi;
 import com.example.proyectosemestral.models.Anime;
 import com.example.proyectosemestral.models.Comment;
 import com.example.proyectosemestral.models.Post;
+import com.example.proyectosemestral.models.User;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,6 +29,8 @@ public abstract class BasePresenter extends AppCompatActivity  {
     protected String Base_url = "https://team-bomba-api.herokuapp.com/api/v1/";
     protected List<Anime> animeLists;
     protected List<Post> postLists;
+    protected User current_user;
+
     public PostListAdapter PostAdapter;
     public AnimeListAdapter AnimeAdapter;
     public Context context = this;
@@ -94,6 +97,46 @@ public abstract class BasePresenter extends AppCompatActivity  {
 
             }
         });
+    }
+
+    protected void getCurrentUser(int user_id){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Base_url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
+
+        Call<User> call = teamBombaApi.getUser(user_id);
+
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if(!response.isSuccessful()){
+                    return;
+                }
+                current_user = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
+    }
+
+    protected void SetCurrentUserIfexist(){
+        if(user_signed_in() > 0){
+            getCurrentUser(user_signed_in());
+        }
+    }
+
+    protected int user_signed_in(){
+        int current_user_id = User.current_user(context);
+        if(current_user_id > 0){
+            return current_user_id;
+        }
+        return 0;
     }
 
 }
