@@ -156,7 +156,7 @@
                 android:layout_height="125dp"
                 android:layout_gravity="center"
                 android:layout_margin="40px"
-                tools:srcCompat="@mipmap/ic_launcher" />
+                android:src="@drawable/perfil" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
