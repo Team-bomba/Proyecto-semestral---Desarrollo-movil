@@ -68,6 +68,7 @@ public class AnimeViewActivity extends BasePresenter {
                 anime_description = findViewById(R.id.description);
                 anime_description.setText(anime.getDescription());
                 anime_title = findViewById(R.id.TituloDescription);
+                anime_title.setText(anime.getName());
 
                 //getPostComment(post.getId());
             }

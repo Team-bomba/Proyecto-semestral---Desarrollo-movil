@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.proyectosemestral.R;
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.presenters.AnimeViewActivity;
 import com.example.proyectosemestral.presenters.PostViewActivity;
 
 import java.util.List;
