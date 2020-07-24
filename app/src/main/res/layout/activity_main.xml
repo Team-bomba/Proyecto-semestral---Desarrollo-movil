@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="Nombre de usuario"
+            android:textStyle="bold"
             android:layout_marginLeft="50dp"
             android:textColor="#F5F5F5"
             />
@@ -63,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:text="Password"
+            android:textStyle="bold"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="50dp"
             android:textColor="#F5F5F5"
