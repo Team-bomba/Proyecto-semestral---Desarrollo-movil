@@ -48,13 +48,13 @@ public abstract class BasePresenter extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
     protected void footer(){
         GoHome=findViewById(R.id.btnHome);
         GoPost= findViewById(R.id.btnCommunity);
         GoTendencias= findViewById(R.id.btnTendencies);
         GoSearch= findViewById(R.id.btnSearch);
+
         GoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
