@@ -1,6 +1,7 @@
 package com.example.proyectosemestral.presenters;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,9 +36,9 @@ public class AnimeViewActivity extends BasePresenter {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community);
+        setContentView(R.layout.descripcion);
 
-        lvcomments= findViewById(R.id.lvComments);
+
         getAnime(set_anime());
         SetCurrentUserIfexist();
     }
@@ -64,11 +65,13 @@ public class AnimeViewActivity extends BasePresenter {
                 if(!response.isSuccessful()){
                     return;
                 }
+                Log.e("Errorr", response.toString());
                 anime = response.body();
-                anime_description = findViewById(R.id.description);
+                anime_description = findViewById(R.id.Description);
                 anime_description.setText(anime.getDescription());
                 anime_title = findViewById(R.id.TituloDescription);
                 anime_title.setText(anime.getName());
+
 
                 //getPostComment(post.getId());
             }
