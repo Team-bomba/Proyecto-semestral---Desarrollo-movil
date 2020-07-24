@@ -186,6 +186,8 @@
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
             <ImageView
+                android:background="@drawable/text"
+                android:padding="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="10dp"
                 android:id="@+id/imageview"
@@ -216,6 +218,8 @@
                 android:textSize="20sp" />
             <ImageView
                 android:id="@+id/image"
+                android:background="@drawable/text"
+                android:padding="10dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_width="fill_parent"
