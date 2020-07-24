@@ -72,8 +72,7 @@ public class AnimeViewActivity extends BasePresenter {
                 anime_title = findViewById(R.id.TituloDescription);
                 anime_title.setText(anime.getName());
 
-
-                //getPostComment(post.getId());
+                getAnimeComment(anime.getId());
             }
 
             @Override
@@ -83,7 +82,7 @@ public class AnimeViewActivity extends BasePresenter {
         });
     }
 
-    protected void getPostComment(int post_id){
+    protected void getAnimeComment(int anime_id){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Base_url)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -91,7 +90,7 @@ public class AnimeViewActivity extends BasePresenter {
 
         TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
 
-        Call<List<Comment>> call = teamBombaApi.getPostComments(post_id);
+        Call<List<Comment>> call = teamBombaApi.getAnimeComment(anime_id);
 
         call.enqueue(new Callback<List<Comment>>() {
             @Override

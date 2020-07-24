@@ -35,6 +35,9 @@ public interface TeamBombaApi {
     @GET("posts/{id}/comments")
     Call<List<Comment>> getPostComments(@Path("id") int query);
 
+    @GET("animes/{id}/comments")
+    Call<List<Comment>> getAnimeComments(@Path("id") int query);
+
     @GET("users/{id}")
     Call<User> getUser(@Path("id") int query);
 
