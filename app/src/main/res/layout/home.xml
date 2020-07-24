@@ -149,19 +149,25 @@
         android:orientation="vertical"
         android:layout_height="match_parent">
         <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/slider"
             android:layout_width="match_parent"
             android:layout_marginBottom="15dp"
             android:layout_height="200dp"
             app:delay="0"
             app:period="1000"
+            app:auto_cycle="true"
+            app:corner_radius="5"
             android:background="#000000"
-            app:auto_cycle="true"></com.denzcoskun.imageslider.ImageSlider>
+
+            >
+    </com.denzcoskun.imageslider.ImageSlider>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/card"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:id="@+id/destacados"
@@ -171,6 +177,13 @@
                 android:text="Destacados"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/destacado"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -190,6 +203,12 @@
                 android:text="Estrenos"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/cero"/>
         </LinearLayout>
 
     </LinearLayout>
