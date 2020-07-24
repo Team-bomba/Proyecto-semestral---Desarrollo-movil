@@ -42,6 +42,7 @@ public class AnimeViewActivity extends BasePresenter {
 
         getAnime(set_anime());
         SetCurrentUserIfexist();
+        footer();
     }
 
     private int set_anime(){

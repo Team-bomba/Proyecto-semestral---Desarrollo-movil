@@ -19,6 +19,7 @@ public class AnimeListAdapter extends BaseAdapter {
     private Context context;
     private List<Anime> listItems;
 
+
     public AnimeListAdapter(Context context, List<Anime> listItems){
         this.context = context;
         this.listItems= listItems;
@@ -58,8 +59,10 @@ public class AnimeListAdapter extends BaseAdapter {
                 Intent i=new Intent(context, AnimeViewActivity.class);
                 i.putExtra("anime_id", anime_id);
                 context.startActivity(i);
+
             }
         });
         return convertView;
     }
+
 }
