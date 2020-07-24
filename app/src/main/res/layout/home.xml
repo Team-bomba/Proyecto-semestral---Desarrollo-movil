@@ -9,52 +9,38 @@
 
     <!-- Footer aligned to bottom -->
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="-2dp"
+        android:orientation="horizontal"
         android:background="#484848"
         android:gravity="center">
 <LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:orientation="horizontal"
     android:layout_height="match_parent">
     <TextView
         android:id="@+id/name"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="12dp"
         android:text="Anime XD"
         android:textColor="#0F73FF"
         android:textSize="20sp" />
-
-
-
-
 </LinearLayout>
-        <LinearLayout
-            android:layout_width="100dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/btnPerfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#484848"
-                android:src="@mipmap/active_home"
-                />
 
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            android:background="#484848"
+            android:src="@drawable/profile" />
 
-        </LinearLayout>
-
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/footer"

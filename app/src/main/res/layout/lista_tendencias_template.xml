@@ -26,7 +26,8 @@
                 android:layout_width="150px"
                 android:layout_height="150px"
                 android:layout_margin="20px"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                android:layout_gravity="center"
+                tools:srcCompat="@mipmap/ic_launcher" />
 
 
             <LinearLayout
