@@ -145,6 +145,7 @@
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="200dp"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center"
