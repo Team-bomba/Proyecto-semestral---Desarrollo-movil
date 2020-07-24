@@ -68,7 +68,7 @@ public class MainActivity extends BasePresenter {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(!response.isSuccessful()){
-                    Toast.makeText(context,"Usuario o Password incorrecto",
+                    Toast.makeText(context,"Nel bro, te equivocaste",
                         Toast.LENGTH_SHORT).show();
                     Log.e("ERROR", response.message());
                     return;
