@@ -103,6 +103,42 @@
             android:layout_marginTop="25dp"
             android:textSize="12dp"
             />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp"
+                android:text="Alfonso Alvarado"
+                android:textColor="#F5F5F5"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp"
+                android:text="Luis Gonzalez"
+                android:textColor="#F5F5F5"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp"
+                android:text="Shantal de Leon"
+                android:textColor="#F5F5F5"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp"
+                android:text="Tony Zhu"
+                android:textColor="#F5F5F5"
+                android:textSize="12dp"
+                />
 
         </LinearLayout>
     </LinearLayout>
