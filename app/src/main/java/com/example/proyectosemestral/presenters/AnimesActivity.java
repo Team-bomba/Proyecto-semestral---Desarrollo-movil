@@ -1,20 +1,18 @@
 package com.example.proyectosemestral.presenters;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.example.proyectosemestral.R;
 
-public class tendenciasActivity extends BasePresenter {
+public class AnimesActivity extends BasePresenter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tendencias);
+        setContentView(R.layout.search);
 
         lvItems = findViewById(R.id.lvItems);
-        getAnimeTendencias();
+        getAnimes();
         SetCurrentUserIfexist();
     }
 }

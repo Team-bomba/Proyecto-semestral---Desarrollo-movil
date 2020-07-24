@@ -13,15 +13,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".presenters.tendenciasActivity"></activity>
         <activity android:name=".presenters.PostsActivity">
+        </activity>
+        <activity android:name=".presenters.PostViewActivity"></activity>
+        <activity android:name=".presenters.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presenters.PostViewActivity"></activity>
-        <activity android:name=".presenters.MainActivity">
-        </activity>
+        <activity android:name=".presenters.AnimesActivity"></activity>
+        <activity android:name=".presenters.PerfilViewActivity"></activity>
     </application>
 
 </manifest>

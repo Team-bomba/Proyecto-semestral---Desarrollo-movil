@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,6 +64,7 @@ public class MainActivity extends BasePresenter {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(!response.isSuccessful()){
+                    Log.e("ERROR", response.message());
                     return;
                 }
                 current_user = response.body();
@@ -73,7 +75,7 @@ public class MainActivity extends BasePresenter {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-
+                Log.e("ERROR",t.getMessage());
             }
         });
     }

@@ -70,6 +70,33 @@ public abstract class BasePresenter extends AppCompatActivity  {
             }
         });
     }
+    protected void getAnimes(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Base_url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
+
+        Call<List<Anime>> call = teamBombaApi.getAnimes();
+
+        call.enqueue(new Callback<List<Anime>>() {
+            @Override
+            public void onResponse(Call<List<Anime>> call, Response<List<Anime>> response) {
+                if(!response.isSuccessful()){
+
+                }
+                animeLists = response.body();
+                AnimeAdapter = new AnimeListAdapter(context, animeLists);
+                lvItems.setAdapter(AnimeAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<Anime>> call, Throwable t) {
+
+            }
+        });
+    }
 
     protected void getPosts(){
         Retrofit retrofit = new Retrofit.Builder()
