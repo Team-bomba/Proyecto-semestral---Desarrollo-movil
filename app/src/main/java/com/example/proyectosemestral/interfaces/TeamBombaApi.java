@@ -36,6 +36,5 @@ public interface TeamBombaApi {
     Call<User> getUser(@Path("id") int query);
 
     @GET("/users/verify?")
-    Call<User> verifyUser(@Query("user[name]") String name,
-                                     @Query("user[password]") String password);
+    Call<User> verifyUser(@Query("name") String name, @Query("password") String password);
 }
