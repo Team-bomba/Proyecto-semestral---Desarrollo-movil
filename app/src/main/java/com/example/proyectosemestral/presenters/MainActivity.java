@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.proyectosemestral.R;
 import com.example.proyectosemestral.adapters.AnimeListAdapter;
@@ -67,9 +68,13 @@ public class MainActivity extends BasePresenter {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(!response.isSuccessful()){
+                    Toast.makeText(context,"Usuario o Password incorrecto",
+                        Toast.LENGTH_SHORT).show();
                     Log.e("ERROR", response.message());
                     return;
                 }
+                Toast.makeText(context,"Bienvenido",
+                        Toast.LENGTH_SHORT).show();
                 current_user = response.body();
                 current_user.save_current_user(context);
                 Intent i = new Intent(context, HomeActivity.class);
@@ -79,6 +84,8 @@ public class MainActivity extends BasePresenter {
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Log.e("ERROR",t.getMessage());
+                Toast.makeText(context,"Error del servidor",
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }
