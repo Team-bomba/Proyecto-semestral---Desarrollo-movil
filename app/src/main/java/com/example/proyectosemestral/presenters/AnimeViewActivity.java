@@ -37,6 +37,7 @@ public class AnimeViewActivity extends BasePresenter {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.descripcion);
+        lvcomments = findViewById(R.id.lvComments);
 
 
         getAnime(set_anime());
@@ -73,11 +74,12 @@ public class AnimeViewActivity extends BasePresenter {
                 anime_title.setText(anime.getName());
 
                 getAnimeComment(anime.getId());
+                Log.e("Errorr", response.toString());
+
             }
 
             @Override
             public void onFailure(Call<Anime> call, Throwable t) {
-
             }
         });
     }
@@ -90,7 +92,7 @@ public class AnimeViewActivity extends BasePresenter {
 
         TeamBombaApi teamBombaApi = retrofit.create(TeamBombaApi.class);
 
-        Call<List<Comment>> call = teamBombaApi.getAnimeComment(anime_id);
+        Call<List<Comment>> call = teamBombaApi.getAnimeComments(anime_id);
 
         call.enqueue(new Callback<List<Comment>>() {
             @Override
@@ -98,6 +100,7 @@ public class AnimeViewActivity extends BasePresenter {
                 if(!response.isSuccessful()){
                     return;
                 }
+                Log.e("Errorr", response.toString());
                 commentLists = response.body();
                 commentListAdapter = new CommentListAdapter(context, commentLists);
                 lvcomments.setAdapter(commentListAdapter);
