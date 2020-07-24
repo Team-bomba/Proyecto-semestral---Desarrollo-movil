@@ -3,7 +3,10 @@ package com.example.proyectosemestral.presenters;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.proyectosemestral.R;
@@ -36,11 +39,46 @@ public abstract class BasePresenter extends AppCompatActivity  {
     public Context context = this;
 
     protected ListView lvItems;
+    public ImageButton GoHome;
+    public ImageButton GoPost;
+    public  ImageButton GoTendencias;
+    public  ImageButton GoSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+    }
+    protected void footer(){
+        GoHome=findViewById(R.id.btnHome);
+        GoPost= findViewById(R.id.btnCommunity);
+        GoTendencias= findViewById(R.id.btnTendencies);
+        GoSearch= findViewById(R.id.btnSearch);
+        GoHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_home(view);
+            }
+        });
+        GoPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_comunidad(view);
+            }
+        });
+        GoSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_search(view);
+            }
+        });
+        GoTendencias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_tendencias(view);
+            }
+        });
     }
 
     protected void getAnimeTendencias(){
@@ -165,5 +203,23 @@ public abstract class BasePresenter extends AppCompatActivity  {
         }
         return 0;
     }
+    protected  void  ir_tendencias (View view){
+        Intent i = new Intent(context, tendenciasActivity.class);
+        startActivity(i);
 
+    }
+
+    protected  void  ir_search (View view){
+        Intent i = new Intent(context, AnimesActivity.class);
+        startActivity(i);
+
+    }
+    protected  void ir_home (View view){
+        Intent i = new Intent(context, HomeActivity.class);
+        startActivity(i);
+    }
+    protected  void ir_comunidad (View view){
+        Intent i = new Intent(context, PostsActivity.class);
+        startActivity(i);
+    }
 }

@@ -56,7 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#484848"
-        android:src="@mipmap/active_home" />
+        android:src="@mipmap/active_home"
+        />
             <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +77,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_search" />
+                android:src="@mipmap/inactive_search"
+               />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_tendencies" />
+                android:src="@mipmap/inactive_tendencies"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,7 +119,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#484848"
-                android:src="@mipmap/inactive_community" />
+                android:src="@mipmap/inactive_community"
+                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

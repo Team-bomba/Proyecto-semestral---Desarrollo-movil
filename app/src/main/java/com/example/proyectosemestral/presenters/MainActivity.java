@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.proyectosemestral.R;
@@ -28,6 +29,7 @@ public class MainActivity extends BasePresenter {
     EditText Form_user;
     EditText Form_pass;
     Button Form_submit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class MainActivity extends BasePresenter {
         });
     }
 
+
     protected void verifyUser(String email, String password){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Base_url)
@@ -69,7 +72,7 @@ public class MainActivity extends BasePresenter {
                 }
                 current_user = response.body();
                 current_user.save_current_user(context);
-                Intent i = new Intent(context, PostsActivity.class);
+                Intent i = new Intent(context, HomeActivity.class);
                 startActivity(i);
             }
 

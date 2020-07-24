@@ -14,5 +14,6 @@ public class AnimesActivity extends BasePresenter {
         lvItems = findViewById(R.id.lvItems);
         getAnimes();
         SetCurrentUserIfexist();
+        footer();
     }
 }
