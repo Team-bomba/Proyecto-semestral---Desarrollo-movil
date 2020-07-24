@@ -33,6 +33,7 @@ public class PerfilViewActivity extends BasePresenter {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perfil);
         current_user_set();
+        footer();
 
 
         log_out = findViewById(R.id.CerrarSesion);

@@ -43,6 +43,8 @@ public abstract class BasePresenter extends AppCompatActivity  {
     public ImageButton GoPost;
     public  ImageButton GoTendencias;
     public  ImageButton GoSearch;
+    public  ImageButton GoPerfil;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,18 +57,21 @@ public abstract class BasePresenter extends AppCompatActivity  {
         GoTendencias= findViewById(R.id.btnTendencies);
         GoSearch= findViewById(R.id.btnSearch);
 
+
         GoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ir_home(view);
             }
         });
+
         GoPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ir_comunidad(view);
             }
         });
+
         GoSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +82,15 @@ public abstract class BasePresenter extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 ir_tendencias(view);
+            }
+        });
+    }
+    protected void Perfil (){
+        GoPerfil = findViewById(R.id.btnPerfil);
+        GoPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ir_Perfil(view);
             }
         });
     }
@@ -220,6 +234,10 @@ public abstract class BasePresenter extends AppCompatActivity  {
     }
     protected  void ir_comunidad (View view){
         Intent i = new Intent(context, PostsActivity.class);
+        startActivity(i);
+    }
+    protected void ir_Perfil (View view){
+        Intent i = new Intent(context, PerfilViewActivity.class);
         startActivity(i);
     }
 }

@@ -21,6 +21,7 @@ public class HomeActivity extends BasePresenter {
 
         SetCurrentUserIfexist();
         footer();
+        Perfil();
         ImageSlider imageSlider = findViewById(R.id.slider);
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.stone));
