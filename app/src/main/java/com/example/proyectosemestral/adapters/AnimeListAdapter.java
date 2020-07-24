@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.proyectosemestral.R;
 import com.example.proyectosemestral.models.Anime;
+import com.example.proyectosemestral.presenters.PostViewActivity;
 
 import java.util.List;
 public class AnimeListAdapter extends BaseAdapter {
@@ -45,20 +46,19 @@ public class AnimeListAdapter extends BaseAdapter {
         TextView  Description = (TextView) convertView.findViewById(R.id.description);
         //Button BtnGoShow = (Button)  convertView.findViewById(R.id.btn_goShow);
         //TextView Favorito = (TextView) convertView.findViewById(R.id.tvFav);
-        //imgFoto.setImageResource(receta.imgFoto);
+        imgFoto.setImageResource(R.mipmap.ic_launcher);
         Titulo.setText(anime.getName());
         Description.setText(anime.getDescription());
-
-       /* BtnGoShow.setOnClickListener(new View.OnClickListener() {
+        TextView View_more = (TextView) convertView.findViewById(R.id.view_more);
+        View_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String receta_id = Integer.toString(receta.id);
-                Intent i=new Intent(context, RecetaShowActivity.class);
-                i.putExtra("receta_id", receta_id);
+                String anime_id = Integer.toString(anime.getId());
+                Intent i=new Intent(context, AnimeViewActivity.class);
+                i.putExtra("anime_id", anime_id);
                 context.startActivity(i);
             }
         });
-        */
         return convertView;
     }
 }
