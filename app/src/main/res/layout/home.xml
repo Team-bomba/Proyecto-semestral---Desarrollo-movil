@@ -169,6 +169,7 @@
             >
     </com.denzcoskun.imageslider.ImageSlider>
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginHorizontal="10dp"
@@ -182,10 +183,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Destacado"
+                android:text="Destacado semanal"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
             <ImageView
+                android:background="@drawable/text"
+                android:padding="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="10dp"
                 android:id="@+id/imageview"
@@ -216,6 +219,8 @@
                 android:textSize="20sp" />
             <ImageView
                 android:id="@+id/image"
+                android:background="@drawable/text"
+                android:padding="10dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="20dp"
                 android:layout_width="fill_parent"
