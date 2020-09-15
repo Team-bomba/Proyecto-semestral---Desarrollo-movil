@@ -28,7 +28,7 @@
             android:background="@drawable/card"
             android:orientation="vertical">
         <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -50,7 +50,7 @@
         <EditText
             android:id="@+id/Usuario"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="2040dp"
             android:layout_marginTop="5dp"
             android:layout_marginHorizontal="40dp"
             android:background="@drawable/rounded"
