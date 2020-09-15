@@ -114,7 +114,7 @@
                 android:id="@+id/btnCommunity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:background="#484848"
                 android:src="@mipmap/inactive_community" />
             <TextView
@@ -135,7 +135,7 @@
         android:layout_height="fill_parent"
         android:layout_above="@id/footer"
         android:layout_below="@id/header"
-        android:background="#282828"
+        android:background="#2828"
         android:gravity="center" >
 
         <LinearLayout
