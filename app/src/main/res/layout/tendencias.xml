@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Tendencias"
+                android:text="Tendencia"
                 android:textColor="#0F73FF"
                 android:textSize="20sp" />
 
@@ -86,7 +86,7 @@
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="1000dp"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_height="wrap_content">
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="Comunidad"
                 android:gravity="center"
-                android:textColor="#F5F5F5"
+                android:textColor="#F5F5"
                 android:textSize="40px" />
         </LinearLayout>
     </LinearLayout>
