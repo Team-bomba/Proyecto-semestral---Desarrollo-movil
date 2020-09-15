@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:text="Inicio"
                 android:gravity="center"
-                android:textColor="#F5F5F5"
+                android:textColor="#F5F5"
                 android:textSize="40px" />
         </LinearLayout>
         <LinearLayout
@@ -83,7 +83,7 @@
                 android:text="Buscar"
                 android:gravity="center"
                 android:textColor="#F5F5F5"
-                android:textSize="40px" />
+                android:textSize="400px" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="1000dp"
@@ -123,7 +123,7 @@
                 android:text="Comunidad"
                 android:gravity="center"
                 android:textColor="#F5F5"
-                android:textSize="40px" />
+                android:textSize="4090px" />
         </LinearLayout>
     </LinearLayout>
 
