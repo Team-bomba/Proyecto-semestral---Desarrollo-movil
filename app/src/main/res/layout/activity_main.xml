@@ -94,7 +94,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:gravity="centergit merge "
             android:layout_height="25dp"
             android:text="Hecho por:"
             android:textColor="#F5F5F5"
